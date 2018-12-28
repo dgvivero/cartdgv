@@ -1,0 +1,11 @@
+<img src="resources/microsules.jpg"  alt="roche" class="col-md-2" >
+<div class="col-md-10">
+  <h3>{{model.nombrecomercial}}</h3>
+  <p><strong>Descuento sobre P.Publico: </strong>{{model.descuento}}%</p>
+  <p class="small"><strong>Precio de venta recomendado: </strong>{{model.pvpr}}</p>
+  <form class="form-inline">
+    cantidad: <input type="number" name="quantity" min="1" max="100" class="form-control">
+    <br><br>
+    <button type="button" class="btn-sm btn-primary form-control"> comprar </button>
+  </form>
+</div>

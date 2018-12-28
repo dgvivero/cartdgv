@@ -1,0 +1,29 @@
+<div class="row">
+ {{outlet}}
+</div>
+<hr>
+<table 
+  id="productsList" 
+  class="table table-hover table-condensed table-striped small scrollable"
+>
+  <thead>
+    <th>marca</th>
+    <th>descripciòn</th>
+    <th>nombre</th>
+    <th>precio</th>
+    <th>stock</th>
+    <th>tipo</th>
+  </thead>
+  <tbody>
+    {{#each model as |product|}}
+        {{#link-to "products.product" product.id  tagName='tr'}} 
+        <td>{{product.codmarca}} </td>
+        <td>{{product.descripcion}}</td>
+        <td>{{product.nombrecomercial}}</td>
+        <td>{{product.precio}}</td>
+        <td>icono</td>
+        <td>{{product.tipo}}</td>
+        {{/link-to}}
+    {{/each}}
+  </tbody>
+</table>

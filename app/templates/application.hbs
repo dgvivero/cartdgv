@@ -1,5 +1,34 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{header-bar }}
+<section class="main container-fluid">
+ {{outlet}}
+</section>
 
-{{outlet}}
+<aside class="sidebar">
+  <table id="cart"  class="table table-hover">
+    <thead>
+    <th>uds.</th>
+    <th>descripciòn</th>
+    <th>importe</th>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{p.uds}}</td>
+      <td>{{p.producto.descripcion}}</td>
+      <td>$10,00</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="meta">
+    <form>
+      <div class="form">
+        <label class="form-control">Subtotal:</label>
+        <label class="form-control">Impuestos:</label>
+        <label class="form-control">Total:</label>
+        <button type="button" class="btn btn-primary form-control">Finalizar compra</button>
+      </div>
+    </form>
+  </div>
+</aside>
+<footer class="footer">
+  <b> © 2015 drogueríaVaradero. Todos los derechos reservados.</b>
+</footer>
